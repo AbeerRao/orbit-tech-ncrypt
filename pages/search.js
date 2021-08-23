@@ -30,7 +30,7 @@ function Search({ searchResults }) {
                          </div>
                          <div className="flex flex-col">
                               {searchResults?.map((item) => {
-                                   if (item.location == location) {
+                                   if (item.location.toLowerCase() == location.toLowerCase()) {
                                         return (
                                              <InfoCard
                                              key={item.title}
