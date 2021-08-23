@@ -19,7 +19,7 @@ function Search({ searchResults }) {
                <Header placeholder={searchHolder} />
                <main className="flex">
                     <section className="flex-grow pt-14 px-6">
-                         <p className="text-sm">300+ Stays for {noGuests} guests ({range})</p>
+                         <p className="text-sm">2 Stays for {noGuests} guests ({range})</p>
                          <h1 className="text-3xl font-semibold mt-2 mb-6">Stays in {location}</h1>
                          <div className="hidden md:inline-flex mb-5 space-x-3 text-gray-800 whitespace-nowrap">
                               <p className="search-button">Cancellation Flexibility</p>
@@ -29,17 +29,20 @@ function Search({ searchResults }) {
                               <p className="search-button">Other Filters</p>
                          </div>
                          <div className="flex flex-col">
-                              {searchResults?.map((item) => (
-                                   <InfoCard
-                                        key={item.title}
-                                        img={item.img}
-                                        location={item.location}
-                                        title={item.title}
-                                        description={item.description}
-                                        star={item.star}
-                                        price={item.price}
-                                        total={item.total} />
-                              ))}
+                              {searchResults?.map((item) => {
+                                   if (item.location == location) {
+                                        return (
+                                             <InfoCard
+                                             key={item.title}
+                                             img={item.img}
+                                             location={item.location}
+                                             title={item.title}
+                                             description={item.description}
+                                             star={item.star}
+                                                  price={item.price} />
+                                        )
+                                   }
+                              })}
                          </div>
                     </section>
                </main>
@@ -51,7 +54,7 @@ function Search({ searchResults }) {
 export default Search;
 
 export async function getServerSideProps() {
-     const searchResults = await fetch("https://links.papareact.com/isz").then(res => res.json());
+     const searchResults = await fetch("http://13.232.61.5/stays").then(res => res.json());
      return {
           props: {
                searchResults,

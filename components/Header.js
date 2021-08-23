@@ -43,7 +43,7 @@ function Header({ placeholder }) {
 
      const MyImage = () => {
           return (
-               <Image loader={myLoader} src={"https://darth-0-assets.s3.us-south.cloud-object-storage.appdomain.cloud/Copy%20of%20Untitled%20(2).png"} objectFit="cover" layout="fill" objectPosition="left" height={12} />
+               <Image loader={myLoader} src={"https://darth-0-assets.s3.us-south.cloud-object-storage.appdomain.cloud/Copy%20of%20Untitled%20(2).png"} objectFit="cover" layout="fill" objectPosition="left" />
           )
      }
 

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { HeartIcon } from "@heroicons/react/outline";
 import { StarIcon } from "@heroicons/react/solid";
 
-function InfoCard({ img, location, title, description, star, price, total }) {
+function InfoCard({ img, location, title, description, star, price }) {
      return (
           <div className="flex py-7 px-6 border cursor-pointer hover:opacity-80 hover:shadow-lg rounded-2xl mb-5 transition duration-200 ease-out">
                <div className="relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0">
@@ -30,7 +30,6 @@ function InfoCard({ img, location, title, description, star, price, total }) {
                          </p>
                          <div>
                               <p className="text-lg font-semibold pb-2 lg:text-2xl">{price}</p>
-                              <p className="text-right font-extralight">{total}</p>
                          </div>
                     </div>
                </div>
