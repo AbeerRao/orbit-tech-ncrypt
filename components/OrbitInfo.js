@@ -24,7 +24,7 @@ function OrbitInfo() {
                     <div className="flex flex-col flex-grow pl-5">
                          <h4 className="text-2xl font-semibold">How is it done?</h4>
                          <div
-                              className="border-b w-10 pt-2" />
+                              className="border-b w-10 pt-2 ml-4" />
                          <p className="pt-2 text-gray-700 flex-grow leading-loose">
                               As mentioned earlier, we leverage the best space tech provided by our parent organisation Orbit Technologies. We also work in tandum with NASA for making the environment sustainable on each of the planets. This has taken multiple years of research and perfection to make sure that there are no errors.
                          </p>
