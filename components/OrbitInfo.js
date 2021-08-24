@@ -43,7 +43,7 @@ function OrbitInfo() {
                          <div
                               className="border-b w-10 pt-2" />
                          <p className="pt-2 text-gray-700 flex-grow leading-loose">
-                              For the best results on this website, only search for the planets given in the "Explore nearby" section of the home page. They are the planets we have been able to colonise and made safe for human existance.
+                              For the best results on this website, only search for the planets given in the "All Travel Locations" section of the home page. They are the planets we have been able to colonise and made safe for human existance.
                          </p>
                     </div>
                </div>

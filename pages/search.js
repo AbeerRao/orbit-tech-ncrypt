@@ -21,13 +21,6 @@ function Search({ searchResults }) {
                     <section className="flex-grow pt-14 px-6">
                          <p className="text-sm">2 Stays for {noGuests} guests ({range})</p>
                          <h1 className="text-3xl font-semibold mt-2 mb-6">Stays in {location}</h1>
-                         <div className="hidden md:inline-flex mb-5 space-x-3 text-gray-800 whitespace-nowrap">
-                              <p className="search-button">Cancellation Flexibility</p>
-                              <p className="search-button">Type of Place</p>
-                              <p className="search-button">Price</p>
-                              <p className="search-button">Rooms and Beds</p>
-                              <p className="search-button">Other Filters</p>
-                         </div>
                          <div className="flex flex-col">
                               {searchResults?.map((item) => {
                                    if (item.location.toLowerCase() == location.toLowerCase()) {

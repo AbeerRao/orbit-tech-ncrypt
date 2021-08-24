@@ -5,7 +5,6 @@ import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import { DateRangePicker } from 'react-date-range';
 import { useRouter } from "next/dist/client/router";
-import Document from 'next/document'
 
 function Header({ placeholder }) {
 
@@ -44,12 +43,12 @@ function Header({ placeholder }) {
 
      const MyImage = () => {
           return (
-               <Image loader={myLoader} src={"https://darth-0-assets.s3.us-south.cloud-object-storage.appdomain.cloud/Copy%20of%20Untitled%20(2).png"} objectFit="cover" layout="fill" objectPosition="left" />
+               <Image loader={myLoader} src={"https://darth-0-assets.s3.us-south.cloud-object-storage.appdomain.cloud/Copy%20of%20Untitled%20(3).png"} objectFit="cover" layout="fill" objectPosition="left" />
           )
      }
 
      return (
-          <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10;">
+          <header className="sticky top-0 z-50 grid grid-cols-2 bg-white shadow-lg p-5 md:px-10">
                {/* Left */}
                <div className="relative flex items-center h-16 cursor-pointer my-auto" onClick={() => router.push('/')}>
                     {MyImage()}
@@ -66,17 +65,6 @@ function Header({ placeholder }) {
                          className="hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer mx-auto md:mx-2" />
                </div>
                {/* Right */}
-               <div className="hidden md:inline-flex space-x-4 items-center justify-end text-gray-500">
-                    <p className="cursor-pointer">Become a host</p>
-                    <GlobeAltIcon
-                         className="h-6 cursor-pointer animate-spin" />
-                    <div className="flex items-center space-x-2 border-2 p-2 rounded-full">
-                         <MenuIcon
-                              className="h-6 cursor-pointer" />
-                         <UserCircleIcon
-                              className="h-6 cursor-pointer" />
-                    </div>
-               </div>
                {searchInput && (
                     <div className="flex flex-col col-span-3 mx-auto mt-5">
                          <DateRangePicker
