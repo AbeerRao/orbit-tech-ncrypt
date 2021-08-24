@@ -48,16 +48,8 @@ function Header({ placeholder }) {
           )
      }
 
-     const el = Document.querySelector(".myElement")
-     const observer = new IntersectionObserver(
-          ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 1),
-          { threshold: [1] }
-     );
-
-     observer.observ
-
      return (
-          <header className="myElement">
+          <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10;">
                {/* Left */}
                <div className="relative flex items-center h-16 cursor-pointer my-auto" onClick={() => router.push('/')}>
                     {MyImage()}
