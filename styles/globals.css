@@ -4,4 +4,11 @@
      .search-button {
           @apply px-4 py-2 border rounded-full cursor-pointer hover:shadow-lg active:scale-95 active:bg-gray-100 transition transform duration-100 ease-out;
      }
+     .myElement {
+          @apply sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10;
+     }
+
+     .myElement.is-pinned {
+          @apply bg-red-600;
+     } 
 }

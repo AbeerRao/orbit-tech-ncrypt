@@ -5,6 +5,7 @@ import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import { DateRangePicker } from 'react-date-range';
 import { useRouter } from "next/dist/client/router";
+import Document from 'next/document'
 
 function Header({ placeholder }) {
 
@@ -47,14 +48,22 @@ function Header({ placeholder }) {
           )
      }
 
+     const el = Document.querySelector(".myElement")
+     const observer = new IntersectionObserver(
+          ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 1),
+          { threshold: [1] }
+     );
+
+     observer.observ
+
      return (
-          <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10">
+          <header className="myElement">
                {/* Left */}
                <div className="relative flex items-center h-16 cursor-pointer my-auto" onClick={() => router.push('/')}>
                     {MyImage()}
                </div>
                {/* Middle */}
-               <div className="flex items-center md:border-2 rounded-full py-2 md:shadow-sm">
+               <div className="flex items-center md:border-2 rounded-full py-2 md:shadow-sm hover:shadow-lg hover:scale-105 transition transform duration-200">
                     <input
                          value={searchInput}
                          onChange={(e) => setSearchInput(e.target.value)}
@@ -68,7 +77,7 @@ function Header({ placeholder }) {
                <div className="hidden md:inline-flex space-x-4 items-center justify-end text-gray-500">
                     <p className="cursor-pointer">Become a host</p>
                     <GlobeAltIcon
-                         className="h-6 cursor-pointer" />
+                         className="h-6 cursor-pointer animate-spin" />
                     <div className="flex items-center space-x-2 border-2 p-2 rounded-full">
                          <MenuIcon
                               className="h-6 cursor-pointer" />

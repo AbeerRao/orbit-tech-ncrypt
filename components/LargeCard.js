@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function LargeCard({ img, title, description, buttonText }) {
      return (
-          <section className="relative py-16 cursor-pointer">
+          <section className="relative cursor-pointer rounded-2xl hover:shadow-2xl hover:scale-105 mt-10 mb-10 transition transform duration-200 ease-out">
                <div className="relative h-96 min-w-[300px]">
                     <Image
                          src={img}
