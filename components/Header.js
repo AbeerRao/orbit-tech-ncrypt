@@ -58,7 +58,7 @@ function Header({ placeholder }) {
                     <input
                          value={searchInput}
                          onChange={(e) => setSearchInput(e.target.value)}
-                         placeholder={placeholder || "Start your search"}
+                         placeholder={placeholder || "Search for a location"}
                          type="text"
                          className="pl-5 bg-transparent outline-none flex-grow text-gray-600 placeholder-gray-400" />
                     <SearchIcon
